@@ -72,11 +72,11 @@ def train_model(model, dataloaders, dataset_sizes, criterion, optimizer, schedul
                     optimizer.step()
 
                 # statistics
-                running_loss += loss.data[0]
-                running_corrects += torch.sum(preds == labels.data)
+                running_loss += loss.item()
+                running_corrects += torch.sum(preds == labels.data).item()
 
-            epoch_loss = running_loss / dataset_sizes[phase]
-            epoch_acc = running_corrects / dataset_sizes[phase]
+            epoch_loss = running_loss * 1.0 / dataset_sizes[phase]
+            epoch_acc = running_corrects * 1.0 / dataset_sizes[phase]
 
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(
                 phase, epoch_loss, epoch_acc))
