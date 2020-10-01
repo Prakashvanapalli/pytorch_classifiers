@@ -1,21 +1,23 @@
-## This is an experimental setup to build code base for pytorch. Its main is to experiment faster using transfer learning on all available pre-trained models.
+## This is an experimental setup to build code base for pytorch. The main goal is to experiment improve the training speed of model and reduce computational complexity using transfer learing technique on pre-trained models.
 
 ### Dataset: Plant Seedlings classification
 
-Classes present:
+Dataset consists of 12 Classes:
 -----------------
-- Black-grass
-- Charlock
-- Cleavers
-- Common Chickweed
-- Common wheat
-- Fat Hen
-- Loose Silky-bent
-- Maize
-- Scentless Mayweed
-- Shepherds Purse
-- Small-flowered Cranesbill
-- Sugar beet
+<ul> 
+   <li> Black-grass </li>
+   <li>  Charlock </li>
+   <li> Cleavers </li>
+   <li> Common Chickweed </li>
+   <li> Common wheat </li>
+   <li>  Fat Hen </li>
+  <li> Loose Silky-bent </ li>
+   <li> Maize </li>
+   <li> Scentless Mayweed </li>
+   <li> Shepherds Purse </li>
+   <li> Small-flowered Cranesbill </li>
+   <li> Sugar beet </li>
+   </ul>
 
 #### Run the following commands
 To train the models:
@@ -29,7 +31,7 @@ make -f Makefile.predict
 ```
 
 
-## Results
+## Image Folder Sizes 
 total number of train images: 4268
 total number of val images: 482
 total number of test images: 794
@@ -158,11 +160,12 @@ alexnet       |    0.95970           |    0.92946            |
 - ensemble1 - mode of all best performing models LB - 97.32
 
 ## TO_DO
-1) Adding mixup strategy to all the networks
-2) Ensembling model outputs
-3) Model stacking
-4) Extracting bottleneck features and using
-        - ML to train the model
-        - Visualization using T-sne
-5) Solve issue with bninception(Model is not training)
-6) Train Vggm network 
+<ol>
+   <li> Adding mixup strategy to all the networks </li>
+   <li> Ensembling model outputs </li>
+   <li> Model stacking </li>
+<li> Extracting bottleneck features and using </li > 
+   <ul> <li>   ML to train the model </li>
+   <li> Visualization using T-sne </li> </ul>
+   <li> Solve issue with bninception(Model is not training)</li>
+   <li> Train Vggm network </li> </ol>
